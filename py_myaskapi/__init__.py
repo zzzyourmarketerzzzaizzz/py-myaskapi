@@ -112,3 +112,15 @@ class MyAskAPI:
         )
         time.sleep(5)
         return ret
+
+    def ask_question(self, query, debug=False):
+        """ Sends a question to the MyAskAI API.
+        """
+        data = {
+            'query': query,
+        }
+        return self.post(
+            '/ask-ai-query',
+            data=data,
+            debug=debug,
+        )
