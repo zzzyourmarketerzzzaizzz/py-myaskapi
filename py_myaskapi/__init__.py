@@ -22,7 +22,7 @@ class MissingAPIURL(Exception):
 
 
 class MyAskAPI:
-    """ You can initialize it like this:
+    
 
     import py_myaskapi
     ma = py_myaskapi.MyAskAPI(
@@ -35,7 +35,7 @@ class MyAskAPI:
         meta_author='Ed Menendez',
         meta_link=f'https://example.com/example-page/',
     )
-    """
+   
     def __init__(self, *args, **kwargs):
         try:
             self.api_url = kwargs['api_url']
@@ -46,8 +46,7 @@ class MyAskAPI:
         self._api_key = kwargs.get('api_key')
 
     def _standard_headers(self):
-        """ Returns the standard headers
-        """
+       
         return {
             'Content-Type': 'application/json',
             'Accept': 'application/json',
